@@ -7,15 +7,15 @@
     <nav class="main-header__menu">
       <ul>
         <li>
-          <a>Podutos</a>
+          <a routerLink="produtos">Podutos</a>
         </li>
         <li>
           <i class="fa-solid fa-cart-shopping"></i>
-          <a>Carrinho</a>
-          <span class="badge-carrinho">0</span>
+          <a routerLink="carrinho">Carrinho</a>
+          <span class="badge-carrinho">{{ carrinhoService.obtemCarrinho().length }}</span>
         </li>
         <li>
-          <a>Contato</a>
+          <a routerLink="contato">Contato</a>
         </li>
         <li>
           <a><i class="fa-brands fa-facebook-f"></i></a>
@@ -31,9 +31,6 @@
         </li>
       </ul>
     </nav>
-    <form class="search-form">
-      <input type="text" />
-      <button><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
+    <app-barra-pesquisa></app-barra-pesquisa>
   </div>
 </header>
